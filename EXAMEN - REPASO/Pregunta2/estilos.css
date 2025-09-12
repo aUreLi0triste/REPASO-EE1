@@ -1,0 +1,35 @@
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.card-container {
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    border: 1px solid rgb(199, 197, 197);
+}
+
+.name-container h1 {
+    text-align: center;
+    margin: 0;
+    color: white;
+    background-color: rgb(105, 105, 105);
+    font-weight: 500;
+}
+
+.text-container p {
+    text-align: justify;
+    font-display: swap;
+    padding: 15px;
+    margin: 0;
+}
+
+.email-container p {
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(190, 189, 189);
+    margin: 0;
+}

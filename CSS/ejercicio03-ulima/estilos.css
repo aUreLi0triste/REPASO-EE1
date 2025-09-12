@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+}
+
+aside {
+    background-color: #ff5117;
+    width: 40px;
+    align-content: end;
+}
+
+ul {
+    list-style: none;
+    padding: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+aside ul img {
+    width: 16px;
+    margin-bottom: 15px;
+
+}
+
+header {
+    display: flex;
+    width: 100%;
+}
+
+.logo {
+    padding: 17px;
+    margin-left: 20px;
+    width: 245px;
+}
+
+header input {
+    padding: 0px 10px;
+    margin-left: 200px;
+    margin-top: 30px;
+    width: 220px;
+    height: 30px;
+
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.menuHamburguesa {
+    background-color: black;
+    display: flex;
+    color: white;
+}
+
+
+.menu {
+    padding: 20px;
+    padding-top: 30px;
+}
+
+.boton {
+    padding: 20px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.barra1,
+.barra2,
+.barra3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin-top: 6px;
+    transition: 0.4s;
+}
+
+.change .barra1 {
+    transform: translate(0px, 11px) rotate(-45deg);
+}
+
+.change .barra3 {
+    transform: translate(0px, -11px) rotate(45deg) ;
+}
+
+.change .barra2 {
+    opacity: 0;
+}

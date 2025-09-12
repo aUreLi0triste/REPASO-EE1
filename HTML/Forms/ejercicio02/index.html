@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de registro de envio</title>
+
+
+</head>
+
+<body>
+    <h1>Formulario de registro de envio</h1>
+    <hr>
+    <form action="ingresi_sistema.html" method="get">
+        <br>
+        <label for="usuario">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre" />
+
+        <br><br>
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" placeholder="Apellido" />
+
+        <br><br>
+        <h4>Direccion</h4>
+        <select name="departamento" id="departamento">
+            <option value="departamento">Lima</option>
+            <option value="departamento">Cusco</option>
+            <option value="departamento">Arequipa</option>
+            <option value="departamento">Tacna</option>
+            <option value="departamento">Piura</option>
+            <option value="departamento">Ica</option>
+        </select>
+
+        <br><br>
+        <select name="provincia" id="provincia">
+            <option value="provincia">a</option>
+            <option value="provincia">b</option>
+            <option value="provincia">c</option>
+        </select>
+
+        <br><br>
+        <select name="distrito" id="distrito">
+            <option value="distrito">Los Olivos</option>
+            <option value="distrito">Surco</option>
+            <option value="distrito">Comas</option>
+        </select>
+
+        <br><br>
+        <span><b>Tipo de envio</b></span>
+        <br>
+        <label for="normal">Normal</label>
+        <input type="radio" id="normal" name="tipo_envio" value="normal">
+        <br>
+        <label for="express">Express</label>
+        <input type="radio" id="express" name="tipo_envio" value="express">
+        <br><br>
+
+        <span>Disponibilidad de horas</span>
+        <br>
+        <label for="manana">Mañana</label>
+        <input type="checkbox" id="manana" name="manana" value="manana">
+        <br>
+        <label for="tarde">Tarde</label>
+        <input type="checkbox" id="tarde" name="tarde" value="tarde">
+        <br>
+        <label for="noche">Noche</label>
+        <input type="checkbox" id="noche" name="noche" value="noche">
+
+
+        <br><br>
+        <label for="comentarios">Comentarios</label>
+        <br>
+        <textarea name="comentarios" id="comentarios" placeholder="Escriba su comentario aqui..."></textarea>
+
+        <br><br>
+        <label for="fecha">Fecha deseada de entrega: </label>
+        <input type="date" name="fecha" id="fecha">
+
+
+        <br><br>
+        <input type="submit" value="Registrarse" />
+        <input type="reset" value="Borrar" />
+
+
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+html,
+body,
+footer {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    display: flex;
+    padding: 10px;
+    margin-left: 70px;
+}
+
+.logo {
+    width: 250px;
+    height: 50px;
+    padding: 5px;
+
+}
+
+.navegacion {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navegacion li a {
+    text-decoration: none;
+    color: rgb(64, 64, 64);
+    font-size: 14px;
+}
+
+section .contenedorImagen {
+    background-image: url("img/banner.jpg");
+    background-size: 100%;
+    height: 570px;
+
+}
+
+.contenedorRedes h2 {
+    font-size: 15px;
+    font-weight: lighter;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+section .contenedorTexto {
+    color: white;
+    padding-top: 200px;
+    margin-left: 100px;
+}
+
+
+section .contenedorTexto h1 {
+    margin: 0;
+    font-size: 45px;
+}
+
+section .contenedorTexto h2 {
+    width: 380px;
+    font-size: 20px;
+    font-weight: lighter;
+    padding-bottom: 15px;
+}
+
+section .Unete {
+    border: 0;
+    background-color: #9bf00b;
+    color: rgb(6, 93, 4);
+    padding: 8px;
+    width: 170px;
+    text-align: center;
+    font-weight: 800;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+section .informacion {
+    padding-left: 20px;
+    border: 0;
+    color: #9bf00b;
+    text-align: center;
+    font-weight: 800;
+    background-color: transparent;
+    cursor: pointer;
+    
+}
+
+section .contenedorRedes {
+    display: flex;
+    font-weight: lighter;
+    padding-left: 100px;
+}
+
+footer {
+    background-color: #f2f2f2;
+
+}
+
+.footer-mid {
+    padding-top: 40px;
+    display: flex;
+
+}
+
+section .Examinar, .Recursos {
+
+    padding-left: 100px;
+    padding-right: 30px;
+    color: rgb(83, 83, 83);
+
+}
+
+section .Examinar h2, .Recursos h2 {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+section .Examinar a, .Recursos a {
+    font-size: 15px;
+    font-weight: lighter;
+    color: rgb(83, 83, 83);
+    display: flex;
+    padding-bottom: 10px;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding-right: 80px;
+    padding-bottom: 20px;
+    justify-content: end;
+    font-size: small;
+    color: gray;
+}

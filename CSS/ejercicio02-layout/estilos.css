@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+header{
+    padding: 20px;
+    background-color:ghostwhite;
+}
+
+main{
+    display: flex;
+    
+}
+
+main section{
+    flex: 1;
+    padding: 20px;
+    border-top: solid 1px gray;
+    
+
+}
+
+main aside{
+    width: 150px;
+    padding: 10px;
+    background-color: ghostwhite;
+    margin-right: 0px;
+    border-right: solid 1px gray;
+}
+
+main aside li{
+    list-style: none;
+    margin-bottom: 10px;
+    font-size: large;
+    font-weight: lighter;
+}
+
+main aside li:hover{
+    color: gray;
+    cursor: pointer;
+}
+
+main aside ul{
+    padding: 20px;
+}
+
+article img{
+    width: 200px;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+figure figcaption{
+    text-align: center;
+    font-size: small;
+}
+
+article p{
+    text-align: justify;
+    margin-right: 10px;
+    margin-left: 10px;
+
+
+    font-size: 15px;
+}
+
+.contenedorProductos{
+    display: flex;
+    flex-wrap: wrap;       /* permite que los productos bajen */
+    gap: 20px;             /* espacio entre artículos */
+}
+
+
+.contenedorProductos article{
+    flex: 0 0 calc(33.3% - 20px);  /* 3 por fila */
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: ghostwhite;
+    box-sizing: border-box;
+}
+
+article h3{
+    font-size: large;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+footer{
+    text-align: center;
+    padding: 10px;
+    background-color: ghostwhite;
+    margin-top: 20px;
+}
+
+main aside a{
+    text-decoration: none;
+    color: black;
+}
+
+main aside a.active {
+  color: gray;
+  font-weight: bold; /* opcional */
+}
+
+
+
+
+
+

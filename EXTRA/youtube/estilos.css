@@ -1,0 +1,115 @@
+html,
+body {
+    background-color: rgb(33, 33, 33);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 150px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.iconos-header {
+    display: flex;
+    gap: 15px;
+    margin-right: 10px;
+
+}
+
+.iconos-header img {
+    width: 30px;
+    cursor: pointer;
+}
+
+.recomendaciones {
+    display: flex;
+    gap: 10px;
+    margin-left: 10px;
+}
+
+.recomendaciones button{
+    background-color: rgba(109, 109, 109, 0.16);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    padding: 7px;
+    cursor: pointer;
+}
+
+.recomendaciones img{
+    background-color: rgba(109, 109, 109, 0.16);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    padding: 5px;
+    width: 22px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #202020;
+  padding: 8px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer img {
+  width: 28px;
+  cursor: pointer;
+}
+
+/*Hecho x chat*/
+.videos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* dos columnas en tablet */
+  gap: 15px;
+  padding: 15px;
+}
+
+.video-card {
+  background-color: #18181838;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.thumbnail {
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid #303030;
+}
+
+.video-info {
+  display: flex;
+  padding: 10px;
+}
+
+.channel-img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.video-text h3 {
+  font-size: 14px;
+  margin: 0 0 5px;
+  color: white;
+}
+
+.video-text p {
+  font-size: 12px;
+  margin: 2px 0;
+  color: #aaa;
+}
+
+

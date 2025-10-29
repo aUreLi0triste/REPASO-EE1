@@ -1,0 +1,63 @@
+main .seccionHero {
+    border-top: solid 1px gray;
+    border-bottom: solid 1px gray;
+    background: linear-gradient(to bottom, red, white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+main .seccionHero img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+main .seccionHero h2 {
+    color: rgb(72, 72, 72);
+}
+
+main h2 {
+    margin-left: 20px;
+}
+
+main .seccionHero button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+main .seccionDestacados {
+    display: flex;
+}
+
+main .seccionDestacados .card {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 300px;
+}
+
+main .seccionDestacados .card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+main .seccionDestacados .card button {
+    background-color: royalblue;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}

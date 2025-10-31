@@ -52,7 +52,7 @@ function App() {
               )
             }) : <p>No se encontraron productos</p> 
           }
-
+          
         </section>
       </main>
     </>

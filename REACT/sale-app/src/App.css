@@ -1,5 +1,10 @@
-section{
+.sectionGames, .sectionSearch {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+nav{
+  text-align: center;
+  margin: 20px;
 }

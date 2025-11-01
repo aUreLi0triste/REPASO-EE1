@@ -1,0 +1,14 @@
+table{
+    width: 90%;
+    font-size: 18px;
+    text-align: left;
+    justify-content: center;
+    margin: auto;
+    border: 1px solid #000000;
+    border-collapse: collapse;
+}
+
+th, td{
+    border: 1px solid #000000;
+    padding: 10px;
+}

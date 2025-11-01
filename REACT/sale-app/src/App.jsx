@@ -1,11 +1,13 @@
 import './App.css'
-import { useState, useEffect, use} from 'react' //importacion modular
+import { useState, useEffect, use } from 'react' //importacion modular
 import Gamecard from './components/Gamecard/Gamecard'
 import productosOriginales from './data/productosData'
+import { useNavigate } from 'react-router-dom'
 
 function App() {
   const [busqueda, setBusqueda] = useState("") //devuelve un array con dos elementos: el estado actual y una funcion para actualizar ese estado
   const [productos, setProductos] = useState(productosOriginales)
+  const navigate = useNavigate();
 
   // useEffect(() => {
   //   if(productos.length <= 0){
@@ -14,18 +16,34 @@ function App() {
   // }, [productos])
 
   useEffect(() => {
-    if(busqueda.length === 0){
+    const autenticar = () => {
+      const usuario = JSON.parse(localStorage.getItem('usuarioLogueado'));
+      if (!usuario) {
+        navigate('/');
+      }
+    }
+    autenticar();
+
+  }, []);
+
+  useEffect(() => {
+    if (busqueda.length === 0) {
       setProductos(productosOriginales)
     }
-    else if(busqueda.length > 3){
+    else if (busqueda.length > 3) {
       handleBuscar()
-      
+
     }
   }, [busqueda])
 
   const handleBuscar = () => {
     const filtrados = productosOriginales.filter((item) => item.nombre.toLowerCase().includes(busqueda.toLowerCase()))
     setProductos(filtrados)
+  }
+
+  const handleLogout = () => {
+    localStorage.removeItem('usuarioLogueado');
+    navigate('/');
   }
 
   return (
@@ -35,7 +53,8 @@ function App() {
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea soluta pariatur sequi fugit ipsam excepturi nostrum nam, labore, rem, sed unde hic. Nam, tempora officia. Placeat exercitationem nisi fugiat tempora.</p>
       </header>
       <nav>
-        <a href="/acerca">Acerca de</a>
+        <a href="/acerca">Acerca de</a>-
+        <a href="/mantenimiento/productos">Mantenimiento </a>
       </nav>
 
 
@@ -50,10 +69,13 @@ function App() {
               return (
                 <Gamecard {...item} />
               )
-            }) : <p>No se encontraron productos</p> 
+            }) : <p>No se encontraron productos</p>
           }
-          
+
         </section>
+
+        <button onClick={() => handleLogout()}>Cerrar Sesion</button>
+
       </main>
     </>
   )

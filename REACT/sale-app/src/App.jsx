@@ -1,11 +1,12 @@
 import './App.css'
 import { useState, useEffect, use } from 'react' //importacion modular
 import Gamecard from './components/Gamecard/Gamecard'
-import productosOriginales from './data/productosData'
 import { useNavigate } from 'react-router-dom'
+import productosApi from './api/productosApi';
 
 function App() {
-  const [busqueda, setBusqueda] = useState("") //devuelve un array con dos elementos: el estado actual y una funcion para actualizar ese estado
+  const [busqueda, setBusqueda] = useState("")
+  const productosOriginales = productosApi.getAll(); //devuelve un array con dos elementos: el estado actual y una funcion para actualizar ese estado
   const [productos, setProductos] = useState(productosOriginales)
   const navigate = useNavigate();
 
@@ -74,7 +75,11 @@ function App() {
 
         </section>
 
-        <button onClick={() => handleLogout()}>Cerrar Sesion</button>
+        <footer>
+          <button onClick={() => handleLogout()}>Cerrar Sesion</button>
+
+        </footer>
+
 
       </main>
     </>

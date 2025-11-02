@@ -2,26 +2,24 @@ import './Login.css'
 import usuarios from '../../data/usuarios';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useUser } from '../../context/UserContext';
 
 const Login = () => {
     const navigate = useNavigate();
     const [usuarioInput, setUsuarioInput] = useState('');
     const [contraseñaInput, setContraseñaInput] = useState('');
-
+    const [user, login] = useUser();
+    
     const handleLogin = () => {
-        const usuarioEncontrado = usuarios.find(
-            (usuario) =>
-                usuario.nombre.toLowerCase() === usuarioInput.toLowerCase() 
-            && usuario.contraseña.toLowerCase() === contraseñaInput.toLowerCase()
-        );
-        if (usuarioEncontrado) {
-            localStorage.setItem('usuarioLogueado', JSON.stringify(usuarioEncontrado));
-            alert(`Bienvenido, ${usuarioEncontrado.nombre}!`);
+    
+        if (login(usuarioInput, contraseñaInput)) {
             navigate('/inicio');
         } else {
             alert('Usuario o contraseña incorrectos.');
         }   
     };
+
+
     return (
         <>
             <div className="Login">

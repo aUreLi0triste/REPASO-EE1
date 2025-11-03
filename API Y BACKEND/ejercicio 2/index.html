@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <script>
+
+            async function buscarPokemon() {
+                const nombrePokemon = document.getElementById('nombre-pokemon').value.toLowerCase();
+                const respuesta = await fetch("https://pokeapi.co/api/v2/pokemon/"+nombrePokemon);
+                const respuestaJson = await respuesta.json();
+                console.log(respuestaJson);
+                
+                const id = respuestaJson.id;
+                const nombre = respuestaJson.name;
+                const img = respuestaJson.sprites.other["official-artwork"].front_default;
+                const type = respuestaJson.types[0].type.name;
+
+                document.getElementById('nombre').innerHTML = "Nombre: "+nombre;
+                document.getElementById('numero').innerHTML = "ID: "+id;
+                document.getElementById('imagen-pokemon').src = img;  
+                document.getElementById('type').innerHTML = "Tipo   : "+type;
+                
+            }
+
+        </script>
+
+    </head>
+    <body>
+        <h1>Pokemon Search</h1>
+        <p>Ingrese el nombre del pokemon</p>
+        <input type="text" id="nombre-pokemon" placeholder="Ejemplo: charizard">
+        <button onclick="buscarPokemon()">Buscar</button>
+        <h2>Resultado</h2>
+        <h3 id="nombre"></h3>
+        <h4 id="numero"></h4>
+        <img src="" alt="imagen pokemon" id="imagen-pokemon" >
+        <p id="type"></p>
+
+        
+    </body>
+</html>

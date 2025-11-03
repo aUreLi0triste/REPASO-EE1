@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <script>
+            fetch('https://pokeapi.co/api/v2/pokemon/charizard')
+            .then(response => response.json())
+            .then(data => {
+                const imagenPokemon = document.getElementById('imagen-pokemon');
+                imagenPokemon.src = data.sprites.front_default;
+            });
+        </script>
+
+    </head>
+    <body>
+        <h1>Pokemon</h1>
+        <img src="" alt="imagen pokemon" id="imagen-pokemon">
+    </body>
+</html>
